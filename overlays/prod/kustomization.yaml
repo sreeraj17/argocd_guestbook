@@ -1,0 +1,7 @@
+---
+namespace: mc-prod
+resources:
+- ./../../base
+- namespace.yaml
+patchesStrategicMerge:
+- fe.yaml

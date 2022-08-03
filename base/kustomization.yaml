@@ -1,0 +1,5 @@
+resources:
+  - fe-svc.yaml
+  - fe.yaml
+  - redis-svc.yaml
+  - redis.yaml

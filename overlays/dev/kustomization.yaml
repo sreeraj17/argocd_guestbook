@@ -1,0 +1,7 @@
+---
+namespace: mc-dev
+resources:
+- ./../../base
+- namespace.yaml
+patchesStrategicMerge:
+- fe.yaml

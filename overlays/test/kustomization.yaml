@@ -1,0 +1,7 @@
+---
+namespace: mc-test
+resources:
+- ./../../base
+- namespace.yaml
+patchesStrategicMerge:
+- fe.yaml
