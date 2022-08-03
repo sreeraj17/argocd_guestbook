@@ -1,0 +1,16 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: prod-app
+  namespace: argocd
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/sreeraj17/argocd_guestbook.git
+    targetRevision: HEAD
+    path: overlays/prod
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: mc-prod
+  syncPolicy:
+    automated: {}
