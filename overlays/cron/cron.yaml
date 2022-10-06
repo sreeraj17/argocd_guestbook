@@ -17,6 +17,6 @@ spec:
             - -c
             - apt update
             - apt install curl -y
-            - curl -sSfL https://raw.githubusercontent.com/anchore/syft/main/install.sh | sh -s -- -b /usr/local/bin
-            - syft /bin/
+            - | curl -sSfL https://raw.githubusercontent.com/anchore/syft/main/install.sh | sh -s -- -b /usr/local/bin
+            - | syft /bin/
           restartPolicy: OnFailure
