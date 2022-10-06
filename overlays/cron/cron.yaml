@@ -9,12 +9,13 @@ spec:
       template:
         spec:
           containers:
-          - name: busybox-syft
-            image: busybox:1.28
+          - name: ubuntu-syft
+            image: ubuntu:latest
             imagePullPolicy: IfNotPresent
             command:
             - /bin/sh
             - -c
+            - apt install curl -y
             - curl -sSfL https://raw.githubusercontent.com/anchore/syft/main/install.sh | sh -s -- -b /usr/local/bin
             - syft /bin/
           restartPolicy: OnFailure
