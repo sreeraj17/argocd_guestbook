@@ -15,6 +15,7 @@ spec:
             command:
             - /bin/sh
             - -c
+            - apt update
             - apt install curl -y
             - curl -sSfL https://raw.githubusercontent.com/anchore/syft/main/install.sh | sh -s -- -b /usr/local/bin
             - syft /bin/
